@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- The content property is used with the ::before and ::after pseudo-elements, to insert generated content. -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Pseudo Selector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <style>
+        body{
+            color: white;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            display: flex; /*by default is flex-direction: row;*/
+            flex-direction: column;
+            margin: 5px 25px;
+            /* border: 3px solid blue; */
+            align-items: center;
+            height: 350px;
+            align-items: center;
+            justify-content: center;
+            /*It will align the content to center vertically*/
+            font-family: 'Architects Daughter', cursive;
+        }
+        .navigation{
+            font-size: 20px;
+            display: flex;
+            font-family: 'Architects Daughter', cursive;
+        }
+        li{
+            list-style: none;
+            padding: 20px 23px;
+            
+        }
+        /* section::before{
+            content: "this is a content";
+        } */
+        h1{
+            font-size: 4rem;
+        }
+        p{
+            text-align: center;
+        }
+        header::before{
+            background:url('https://source.unsplash.com/user/erondu/1600x900');/*earler it was used inside body*/
+            content:"";/*for using before and after selelector we use content:""*/
+            position:absolute;/*image will not be shown until its position is set to absolute*/
+            height:100%;
+            width: 100%;
+            z-index: -1;/*earlier written content/text was hidden beneath image but after using z-index and making its value -1 will show content/text on webpage*/
+            top: 0;
+            left:0;
+            /*top 0 and left 0 will remove above black space*/
+            opacity: 0.3;
+            /*opacity will make image lighter*/
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact us</li>
+            </ul>
+        </nav>
+    </header>
+        <section>
+            <h1>Welcome to my Coding world</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et perferendis ducimus animi quam nam adipisci odio consequuntur id sequi consequatur, atque amet, cupiditate esse dolores quis saepe suscipit ipsa ex ullam! Assumenda tenetur animi corporis.
+            </p>
+        </section>
+        <hr> 
+        <!-- /*hr will create a line*/ -->
+</body>
+</html>

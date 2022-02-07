@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+    <style>
+        .box{
+            color: blanchedalmond;
+            background-color: red;
+            border:2px solid black;
+            font-size: 50px;
+            display:none;
+        }
+        @media only screen and (max-width:300px){
+            #box1{
+                display: block;/*It means property of display block ranges from 0 to 500px so if any content comes under 0 to 500px will be shown on the screen
+                and above 501px to whole screen,nothing is showed or displayed because of display:none property*/
+                background-color:rgb(255, 0, 0);
+            }
+        }
+        @media only screen and (min-width:300px) and (max-width:600px){ /*only screen means it will only support media type screen and nothing else*/
+            #box2{
+                display: block;
+                background-color: green;
+            }
+        }
+        @media (min-width:600px) and (max-width:900px){
+            #box3{
+                display: block;
+                background-color: blue;
+            }
+        }
+        @media  (min-width:900px) and (max-width:1200px){
+            #box4{
+                display: block;
+                background-color:yellow;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">I have iphone/apple phone</div>
+    <div class="box" id="box2">I have samsung tablet </div>
+    <div class="box" id="box3">I have HP Laptop</div>
+    <div class="box" id="box4">I have widescreen computer</div>
+</body>
+</html>

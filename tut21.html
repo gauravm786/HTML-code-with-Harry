@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Ubuntu', sans-serif;
+            background-color: black;
+        }
+        .container{
+            width: 900px;
+            border: 4px solid purple;
+            margin: 33px auto;
+            background-color: royalblue;
+
+        }
+        .item{
+            border: 4px solid gray;
+            margin: 12px 3px;
+            padding: 12px 3px ;
+            background-color: rgb(215, 221, 215);
+        }
+        #fruits{
+            float: left;
+            width: 48%;
+
+        }
+        #computer{
+            float: right;
+            width: 48%;
+
+        }
+        #stationary{
+            /* float: left; */  
+            /* if float is removed then all the elements or box will colapse */
+            width: 99%;
+            clear: both; 
+          /* float element/box of left(fruits) and float element/box(stationary) of right will not collapse/overlap in stationary as it will clear both the side */
+        }
+        p,h3{
+            /* text-align: left;
+            text-align: right;
+            text-align: center; */
+            text-align: justify;
+        }
+        h1{
+            /* width: 400px; */
+            text-align: center; 
+            margin: 25px auto;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container"> 
+    <h1>Welcome to my store</h1>
+    <div id="fruits" class="item">
+        <h3>Fruits</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, aut?
+        </p>
+    </div>
+
+    <div id="computer" class="item">
+        <h3>Computer</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, fuga.
+        </p>
+    </div>
+
+    <div id="stationary" class="item">
+        <h3>Stationary</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, blanditiis!
+        </p>
+    </div>
+
+    
+    <div id="glasses" class="item">
+        <h3>glasses</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, blanditiis!
+        </p>
+    </div>
+</div>
+</body>
+</html>

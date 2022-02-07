@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo selectors and more designing</title>
+    <!-- hover,visited,active are some example of Pseudo selectors to use it use tag: Pseudo selectors -->
+    <style>
+        .container{
+            border: 4px solid brown;
+            background-color: chartreuse;
+            padding: 35px;;
+            margin: 35px auto;
+            width: 650px;
+            }
+        .btn{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: crimson;
+            padding: 10px;
+            border: none;  /*It will remove unecessary background which was created by container class*/
+            cursor: pointer; /*it will add cursor*/
+            font-size: 13px;
+            border-radius: 5px;
+            }    
+        a{
+            text-decoration: none; /*this will remove underline from Read more which was there bydefault*/
+        }    
+        a:hover{                   /*after moving mouse on Read more it will change its color,bgcolor*/
+            color: black;
+            background-color: rgb(231, 231, 15);
+        }
+         a:visited{                   /*it will change its color normally*/  /*no need to use*/
+            background-color: green;
+        }
+         a:active{            /* It is similar to hover but we have to click on it and it will not change color just by moving cursor on it*/
+            color: cyan;
+            background-color:deeppink;
+            border: black;  
+        }
+        .btn:hover{
+            color:white;
+            background-color: black;
+            border: 4px solid blue;
+
+        }
+
+</style>
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione amet, voluptatibus hic, repudiandae voluptatum reiciendis officiis praesentium minus aliquid doloremque itaque. Temporibus, voluptatibus ab nam tempora quisquam ducimus autem facilis.</p>
+        <a href="https://www.google.com/" class="btn">Read more</a>
+        <button class="btn">Contact us</button>
+    </div>
+</body>
+</html>

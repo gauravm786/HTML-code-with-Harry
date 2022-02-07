@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            /* grid-template-columns: 122px 122px 122px; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-columns: repeat(auto-fit,minmax(400px,1fr) );
+            /*auto-fit will repeat the columns as per requirement*/
+            /*here box will be displayed according to any kind of devices whether it is mobile or computer*/
+
+            justify-content: center;
+            /*all the box will move to the center of the page*/
+
+        }
+        .box{
+            background-color: red;
+            border: 2px solid black;
+            padding: 34px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">This is box1</div>
+        <div class="box">This is box2</div>
+        <div class="box">This is box3</div>
+        <div class="box">This is box4</div>
+        <div class="box">This is box5</div>
+        <div class="box">This is box6</div>
+        <div class="box">This is box7</div>
+        <div class="box">This is box8</div>
+        <div class="box">This is box9</div>
+        <div class="box">This is box10</div>
+        <div class="box">This is box11</div>
+        <div class="box">This is box12</div>
+        <div class="box">This is box13</div>
+        <div class="box">This is box14</div>
+        <div class="box">This is box15</div>
+        <!-- <div class="box">This is box16</div> -->
+    </div>
+</body>
+</html>

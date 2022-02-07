@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- box-shadow: offset-x offset-y color
+    box-shadow: offset-x offset-y color blur-radius color
+    box-shadow: offset-x offset-y color blur-radius spread-radius color -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text shadow</title>
+    <style>
+        .Container{
+            display: flex;
+        }
+        .card{
+            color: black;
+            /* border: 2px solid red; */
+            padding: 23px 12px;
+            margin: 23px 12px;
+            background-color: rosybrown;
+            /* box-shadow: 15px 15px green;  */
+            /*for downside and rightside boxshadow value should be positive*/
+            /* box-shadow: -15px -15px green; */
+            /*for upside and leftside boxshadow value should be negative*/
+            box-shadow:  15px 15px 11px green;
+            box-shadow:  -15px -15px 11px green;
+            box-shadow: 15px 15px 15px 11px green;
+            box-shadow:  -15px -15px 15px 11px green;
+            box-shadow:  -15px -15px 15px 11px rgba(0, 117, 117,0.3);
+            /*alpha(rgba) decides darkness of color*/
+
+            box-shadow: inset 3px 5px green;
+            /*inset gives shadow inside the box*/
+            box-shadow: inset 3px 5px 5px green;
+            box-shadow: inset 3px 5px 5px 7px green;
+        }
+        .card h2{
+            text-shadow:2px 2px 2px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="card" id="card1">
+            <h2>This is C++</h2>
+           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illo sint at tempora aspernatur quo incidunt beatae blanditiis. Ad hic voluptatem laboriosam sed tempora laudantium quasi deserunt optio asperiores dicta! Exercitationem consectetur qui odit?</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>This is Java</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illo sint at tempora aspernatur quo incidunt beatae blanditiis. Ad hic voluptatem laboriosam sed tempora laudantium quasi deserunt optio asperiores dicta! Exercitationem consectetur qui odit?</p>
+        </div>
+        <div class="card" id="card3">
+             <h2>Card3</h2>  
+             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa illo sint at tempora aspernatur quo incidunt beatae blanditiis. Ad hic voluptatem laboriosam sed tempora laudantium quasi deserunt optio asperiores dicta! Exercitationem consectetur qui odit?<p>        
+        </div>
+    </div>
+</body>
+</html>

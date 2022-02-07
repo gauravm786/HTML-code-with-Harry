@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- --means variable and it is used using var -->
+    <!-- root is used to make global variable and it can be used anywhere -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variable/custom properties</title>
+    <style>
+        :root{
+
+            /* --box-color:violet;  */
+            /*earlier variable was defined and used in box and container until root was not used*/
+
+            --primary-color:blue;
+            --danger-color:red;
+            --maxw:333px;
+
+        }
+        .box{
+            color: black;
+            /* background-color: var(--box-color); */
+            /*earlier background color was blue*/
+
+            background-color: var( --primary-color);
+
+
+            height: 200px;
+            width: 200px;
+            /* border: 2px solid red; */
+            border: 2px solid var( --danger-color) ;
+
+            margin: 3px 9px;
+            box-shadow: 11px 11px 11px var(--box-color);
+        }
+        .container{
+            background-color: var(--box-color);
+            display: flex;
+            align-items: center;/*it will vertically align flex item*/
+            justify-content: center;
+            max-width: var(--maxw);
+            margin: auto;
+            background-color: var(--danger-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<!--The div tag is known as Division tag.
+The div tag is used in HTML to make divisions of content in the web page like (text, images, header, footer, navigation bar, etc).-->
+ <!--Div tag is used to do coding seperately-->
+ <!--Input tag is used to take input from user-->
+ <!--name attribute is used to give coressponding value of the tags-->
+ <!--For a <form> element, the name attribute is  used as a reference when the data is submitted.-->
+<!--
+The <input type="checkbox"> defines a checkbox.
+The checkbox is shown as a square box that is ticked (checked) when activated.
+Checkboxes are used to let a user select one or more options of a limited number of choices.
+checked will bydefault select the specific element
+-->
+
+<!--
+The <label> tag is used to specify a label for an <input> element of a form. 
+It adds a label to a form control such as text, email, password, textarea etc. 
+It toggles the control when a user clicks on a text within the <label> element.
+The specific element will be selected after clicking on it
+make sure that for attribute and id attribute are same
+-->
+
+<!--
+The <select> element is used to create a drop-down list.
+The <select> element is most often used in a form, to collect user input.
+The name attribute is needed to reference the form data after the form is submitted
+(if you omit the name attribute, no data from the drop-down list will be submitted).
+The id attribute is needed to associate the drop-down list with a label.
+The <option> tags inside the <select> element define the available options in the drop-down list.
+selected will bydefault select the specific element
+-->
+<body>
+    <h2>This is HTML forms tutorials</h2>
+    <form action="backend.php"> <!--All the data will be submitted in backend.php,but for now it wont be submitted because backend.php is not available or made by us-->
+ 
+        
+    <div>
+    <label for="name">Name:</label>
+    <input type="text" name="MyName" id="name">
+    </div>
+    <br>
+    <div>
+    <label for="name">Role:</label>
+    <input type="text" name="MyRole" >
+    </div>
+    <br>
+    <div>
+    <label for="name"></label>   
+    Email:<input type="email" name="MyEmail">
+    </div>
+    <br>
+    <div>
+        Date:<input type="date" name="MyDate">
+    </div>
+    <br>
+    <div>
+    Bonus:<input type="number" name="MyBonus">
+    </div>
+    <br>
+    <div>
+        Gender: Male<input type="radio" name="myGender">  Female<input type="radio" name="myGender">  Others<input type="radio" name="myGender">
+    </div>
+    <br>
+    <div>
+        Are you eligible:<input type="checkbox" name="MyEligibility" checked>   
+    </div>
+    <br>
+    <div>
+    Write about yourself: <br> <textarea name="" cols="90" rows="10"></textarea> <!--textarea will create a box in which we can write a paragraph-->
+    </div>
+    <label for="car">Cars:</label>
+    <select name="Cars" id="car">
+        <option value="BMW">BMW</option>
+        <option value="Ferrari" selected>Ferrari</option>
+        <option value="Audi">Audi</option>
+    </select>
+    <div>
+    <br>
+    </div>
+    <br>
+    <div>
+    Submit<input type="submit" value="Submit Now">    
+    Reset:<input type="reset" value="Reset Now">
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Inline CSS,Internal CSS and External CSS,from this Inline CSS will have more preference it means website is built according to inline CSS properties
+and from Internal CSS and External CSS,from this whichever is used later on will have more preference depending on which CSS is used later
+but if we use !important in any of them,then properties of that CSS will have more preference and properies of other CSS wont be executed or overwrited. 
+p is selector and color is property and greenyellow is its value
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+    <!--using style tag Internal CSS-->
+    <style>
+        p{
+            color:purple;
+            background-color: green !important;
+        }
+    </style>
+    <link rel="stylesheet" href="tut13.css"> <!--Using External CSS-->
+<body>
+    <h3>This is CSS Tutorial</h3>
+    <!--This is inline CSS-->
+    <!--<p style="color: red; background-color: yellow;">This Tutorial will teach you all about HTML/CSS </p> -->
+    <p>This Tutorial will teach you all about HTML/CSS </p>
+</body>
+</html>

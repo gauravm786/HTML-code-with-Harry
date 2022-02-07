@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- To display block element in the center first we set the width and margin is set to auto then block element will shift to center -->
+<!-- 
+_blank:	Opens the linked document in a new window or tab
+_self:	Opens the linked document in the same frame as it was clicked (this is default)
+_parent:	Opens the linked document in the parent frame
+_top:	Opens the linked document in the full body of the window
+_framename:	Opens the linked document in the named iframe
+     -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute and nth child pseudo selectors</title>
+    <style>
+        .container{
+            display: block;
+            width: 250px;
+            margin: auto;
+        }
+        input{
+            display: block;
+        }
+        /*It will directly style type='text'*/
+        input[type='text']{ 
+            padding:23px;
+            border: 2px solid red;
+        }
+
+        /*It will directly style target and if we remove target atttribute then violet color color wont be applied to Go to Google*/
+        a[target]{
+            font-size: 44px;
+            color: violet;
+        }
+
+        a[target='_self']{
+            font-size: 14px;
+            color: blue;
+        }
+
+        input[type='email']{
+            color: yellow;
+            border: 3px solid black;
+        }
+
+        /*This will apply CSS for third child*/
+        li:nth-child(3){
+            color: chartreuse;
+        }
+
+        /*This will apply CSS for every second child and it apply CSS depending on the formula*/
+        li:nth-child(2n+0){
+            color: cyan;
+        }
+
+        /*Here CSS will be applied to each odd child*/
+        /* li:nth-child(odd){
+            background-color: yellow;
+        } */
+
+        /*Here CSS will be applied to each even child*/
+        li:nth-child(even){
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><a href="https://www.google.com/" target="_blank">Go to Google</a></h1>
+        <h1><a href="https://www.facebook.com/" target="_self">Go to Facebook</a></h1>
+        <form action="" class="form">
+            <input type="text" placeholder="Enter your Name">
+            <input type="email" placeholder="Enter your Email id">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="submit">
+        </form>
+        <ul>
+            <li class="item" id="item1">Item1</li>
+            <li class="item" id="item2">Item2</li>
+            <li class="item" id="item3">Item3</li>
+            <li class="item" id="item4">Item4</li>
+            <li class="item" id="item5">Item5</li>
+            <li class="item" id="item6">Item6</li>
+            <li class="item" id="item7">Item7</li>
+            <li class="item" id="item8">Item8</li>
+            <li class="item" id="item9">Item9</li>
+            <li class="item" id="item10">Item10</li>
+        </ul>
+    </div>
+</body>
+</html>

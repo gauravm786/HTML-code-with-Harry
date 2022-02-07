@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- z-index will work only for position: relative,absolute,sticky or fixed
+    z-index will take place depending on the size given to it,element which have bigger z-index then the changes will be applied according to it 
+and element with small z-index wont be executed.
+The z-index property specifies the stack order of an element.
+An element with greater stack order is always in front of an element with a lower stack order
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 150px;
+            width:150px;
+            border: 2px solid black;
+        }
+        #box1{
+            background-color: red;
+            position: relative;
+            top:50px;
+            z-index: 50px;
+        }
+        #box2{
+            /* visibility: hidden;
+            will hide the element but will show it's empty white-space.
+            display:none;
+            will hide the element and the space */
+            background-color: green;
+            position: relative;
+            top: 35px;
+            z-index: 25;
+
+        }
+        #box3{
+            background-color: blue;
+        }
+        #box4{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.box#box$*4 $ means 1,2,3,4... -->
+<div class="box" id="box1"></div>
+<div class="box" id="box2"></div>
+<div class="box" id="box3"></div>
+<div class="box" id="box4"></div>
+</body>
+</html>

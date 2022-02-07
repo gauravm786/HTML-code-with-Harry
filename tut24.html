@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- display inline will move border to left side without holding content and text
+    display block takes whole place -->
+
+    <!-- Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
+Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements. -->
+
+<!-- 
+The display property specifies if/how an element is displayed.
+Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.
+A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can). -->
+
+<!-- The box-sizing property defines how the width and height of an element are calculated: should they include padding and borders, or not.
+It doesnt change height and width of element set by us -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS display property</title>
+    <style>
+        header{
+            border: 4px solid blue;
+            margin:auto;                  /*it will move the header's content to middle*/
+            width: 98%;
+            background-color: black;
+            color: white;
+        }
+        img{
+        margin: auto;
+        width: 34px;
+        display: block;          /* It will move image to center */
+            
+
+        }
+        h3{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           text-align: center;
+            margin: 0px;/*it will directly remove margin of h3 content/text and content/text will get closer to img */
+        }
+        .box{
+            color:white;
+    background-color:maroon;
+    border: 4px solid black;
+    margin: 4px 0px ;
+    display: inline-block;
+    width: 33%;
+    padding: 5px;
+    box-sizing: border-box;
+        }
+
+        h4,p{
+            font-size: 25px;
+        }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://www.codewithharry.com/assets/img/logo.png" alt="">
+        <h3>welcome to Gaurav's Blog</h3>
+    </header>
+
+<div class="box">
+        <h4 >Heading</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, provident fugit repellat, sequi, nisi facilis repellendus autem eius commodi veniam nobis ducimus! Maxime at sunt neque quia magni dolor veritatis.</p>
+    </div>
+
+    <div class="box">
+        <h4>Heading</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, provident fugit repellat, sequi, nisi facilis repellendus autem eius commodi veniam nobis ducimus! Maxime at sunt neque quia magni dolor veritatis.</p>
+    </div>
+
+    <div class="box">
+        <h4>Heading</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, provident fugit repellat, sequi, nisi facilis repellendus autem eius commodi veniam nobis ducimus! Maxime at sunt neque quia magni dolor veritatis.</p>
+    </div>
+</body>
+</html>

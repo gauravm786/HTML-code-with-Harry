@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            background-color: greenyellow;
+        }
+        .box{
+            color: black;
+            background-color: green;
+            height: 250px;
+            width: 250px;
+            position: relative;
+            /* animation-name: Gaurav1; */
+            /* animation-name: Gaurav2; */
+
+            /* animation-duration: 8s; */
+            /*animation will work for 2s*/
+
+            /* animation-iteration-count: infinite;  */
+            /* animation will repeat 1 times */
+
+            /* animation-iteration-count: infinite;  */
+            /* animation will repeat infinite times*/
+
+            /* animation-fill-mode:forwards; */
+            /*animation will go forward and stop*/
+
+            /* animation-timing-function:ease-out; */
+            /*here animation will go fast initially and then it will be stopped*/
+
+            /* animation-timing-function: ease-in-out; */
+            /*here animation will go fast-slow-fast and then it will be stopped*/
+
+            /* animation-delay: 3s; */
+            /*animation will start after 3s*/
+
+            /* animation-direction:reverse; */
+
+
+            
+            /*We can use multiple properties at the same time like this:-
+            animation-name animation-duration  animation-timing-function animation-delay animation-iteration-count  animation-fill-mode; 
+            */
+            animation: Gaurav2 5s ease-in 1s 2 backwards;
+        }
+
+      @keyframes Gaurav1 {
+          from
+              {
+                  width: 200px;
+              }
+              to
+              {
+                  width: 1400px;
+              }
+            }
+
+      @keyframes Gaurav2 {
+          0%{
+              top: 0px;
+              left: 0px;
+          }
+          25%{
+            top: 250px;
+              left: 0px;
+          }
+          75%{
+            top: 250px;
+              left: 250px;
+          }
+          100%{
+            top: 0px;
+              left: 250px;
+          }
+      }      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+    </div>
+</body>
+</html>

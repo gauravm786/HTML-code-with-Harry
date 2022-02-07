@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Grid Layout
+The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. -->
+
+<!-- Grid Elements
+A grid layout consists of a parent element, with one or more child elements. -->
+
+<!-- Display Property
+An HTML element becomes a grid container when its display property is set to grid or inline-grid. 
+All direct children of the grid container automatically become grid items.
+-->
+
+<!-- Grid Columns
+The vertical lines of grid items are called columns. -->
+
+<!-- Grid Rows
+The horizontal lines of grid items are called rows. -->
+
+<!-- Grid Gaps
+The spaces between each column/row are called gaps. 
+
+You can adjust the gap size by using one of the following properties:
+
+grid-column-gap
+grid-row-gap
+grid-gap   -->
+
+<!-- Grid Lines
+The lines between columns are called column lines.
+
+The lines between rows are called row lines. -->
+
+<!-- All CSS Grid Properties
+Property	Description
+column-gap:	Specifies the gap between the columns
+gap:	A shorthand property for the row-gap and the column-gap properties
+grid:	A shorthand property for the grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns,           
+and the grid-auto-flow properties.
+
+grid-area:	Either specifies a name for the grid item, or this property is a shorthand property for the grid-row-start, grid-column-start, grid-row-end, and grid-column-end properties.
+
+grid-auto-columns:	Specifies a default column size
+grid-auto-flow:	Specifies how auto-placed items are inserted in the grid
+grid-auto-rows:	Specifies a default row size
+grid-column:	A shorthand property for the grid-column-start and the grid-column-end properties
+grid-column-end:	Specifies where to end the grid item
+grid-column-gap:	Specifies the size of the gap between columns
+grid-column-start:	Specifies where to start the grid item
+grid-gap:	A shorthand property for the grid-row-gap and grid-column-gap properties
+grid-row:	A shorthand property for the grid-row-start and the grid-row-end properties
+grid-row-end:	Specifies where to end the grid item
+grid-row-gap:	Specifies the size of the gap between rows
+grid-row-start:	Specifies where to start the grid item
+grid-template:	A shorthand property for the grid-template-rows, grid-template-columns and grid-areas properties
+grid-template-areas:	Specifies how to display columns and rows, using named grid items
+grid-template-columns:	Specifies the size of the columns, and how many columns in a grid layout
+grid-template-rows:	Specifies the size of the rows in a grid layout
+row-gap:	Specifies the gap between the grid rows -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Tutorial</title>
+    <style>
+        .container{
+            display: grid;
+            /*here my container will become grid and all the child become grid items and it(grid and grid items) is a 2d layout*/
+
+            /* grid-template-columns:  300px auto 100px; */
+            /* grid-template-columns:  300px auto 100px; */
+            /* position of columns1  columns2 columns3 and it dternines width/gap between each column */
+
+            /* grid-template-columns: 1fr 4fr 1fr; */
+            /* from the whole width give 1 part to 1st column and 4 part to 2nd column  and 1 part to 3rd column 
+            2nd column takes 4 times the space of 1st and 3rd columns and to check it remove height and width from item*/
+
+            grid-template-columns:repeat(3,auto);
+            /* here columns will repeat 10 times*/
+
+            grid-gap: 3rem;
+            /*rem means into times of actual font,here 3 rem means 3 times the size of font or anything*/
+        }
+
+        .item{
+            /* height: 100px;
+            width: 100px; */
+            background-color: red;
+            margin: 3px;
+            border: 2px solid black;
+            padding:15px 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">This is Item-1</div>
+        <div class="item">This is Item-2</div>
+        <div class="item">This is Item-3</div>
+        <div class="item">This is Item-4</div>
+        <div class="item">This is Item-5</div>
+        <div class="item">This is Item-6</div>
+        <div class="item">This is Item-7</div>
+        <div class="item">This is Item-8</div>
+        <div class="item">This is Item-9</div>
+        <div class="item">This is Item-9</div>
+        <div class="item">This is Item-9</div>
+        <div class="item">This is Item-9</div>
+        <div class="item">This is Item-9</div>
+        <div class="item">This is Item-9</div>
+        <div class="item">This is Item-9</div>
+        <div class="item">This is Item-9</div>
+    </div>
+</body>
+</html>
+<!-- div.item{This is item$}*9 -->

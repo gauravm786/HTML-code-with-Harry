@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+
+        *{
+            /*This is universal selector which helps to set all the elements with same properties initially,but later on we can overwrite it*/
+            box-sizing: border-box;   /*It will adjust width according to padding*/
+            margin: 0;       /*here by default marging and padding of all element will be zero*/
+            padding: 0;
+        }
+        body{
+            background-color: cyan;
+        }
+
+
+        .con{      
+            color:whitesmoke;
+            background-color:  rgb(212, 21, 85);
+            border: 4px solid black;
+            /*
+            padding-top: 50px;
+            padding-bottom: 50px; 
+            padding-left: 50px;
+            padding-right: 50px;
+            */
+
+            /*
+            marging-top: 50px;
+            marging-bottom: 50px; 
+            marging-left: 50px;
+            marging-right: 50px;
+            */
+
+
+            /* padding: 23px 24px 25px 26px;    */
+            /*top padding(23),right padding(24),bottom padding(25),left padding(26)*/
+           
+            /*margin is used to give space between boxes*/
+            /* margin: 50px;       */
+
+            /*padding:y(top,bottom) x(left,right)*/
+            /*marging:y(top,bottom) x(left,right)*/
+            /*padding is done inside element*/
+            /*marging is done outside element*/
+            padding: 34px 19px;
+            margin: 14px 19px;
+            border-radius: 24px;
+            width: 233px; 
+            box-sizing: border-box; /*It will adjust width according to padding*/
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <h4>This is first heading</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo distinctio suscipit laudantium aut quaerat, aliquam fugiat obcaecati asperiores! Incidunt illo, libero tempora velit beatae temporibus nobis quos exercitationem assumenda eveniet?</p>
+
+    </div>
+    <div class="con">
+        <h4>This is second heading</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, omnis! Quia corporis nemo corrupti. Aliquid tempora excepturi modi recusandae quod perspiciatis facilis repellat obcaecati minima, optio error corrupti blanditiis nobis?</p>
+
+    </div>
+    <div class="con">
+        <h4>This is third heading</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi iure quia quidem voluptates excepturi nesciunt voluptatem facilis similique voluptatum? Sint illum, error adipisci explicabo quisquam corrupti eligendi quidem aliquam laborum.</p>
+
+    </div>
+    
+    
+</body>
+</html>
+

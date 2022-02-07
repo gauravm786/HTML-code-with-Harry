@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Block element takes whole place or column and they come in different lines.e.g:-H1,P,div.
+Inline element takes limited space depending on the content and inline element do not seperate their properties on different lines.e.g:-B,Italic,span,strong.
+display:none :-It will disappear the content and also remove underline.
+display:inline :-It will merge two paragraph in one paragraph and second paragrapgh will not start from new line.
+display:block  :-It will seperate the content/word from the lines and both word(will take whole block/line/column in which CSS is applied) and line(remaining content) will be displayed on next line.
+display:inline-block:- It will contain property display:inline and display:block or any changes to specific content/text(using display:block) will be applied along with display:inline properties.
+display:list-item  :-It will display the content in seperate lines while holding the properties of ul tag.
+dispaly:inherit  :- If span is used inside p tag and if display:inherit is used then span will display/apply the property of p tag.
+It means that P tag is the parent of span tag and child will display the property of parent by using dispaly:inherit.
+display:initial :- It will hold the property of original tag which was used at the first time.
+-->
+
+<!--
+The box-sizing property can be used to adjust this behavior:
+content-box gives you the default CSS box-sizing behavior. If you set an element's width to 100 pixels, then the element's content box will be 100 pixels wide, and the width of any border or padding will be added to the final rendered width, making the element wider than 100px.
+border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements. box-sizing: border-box is the default styling that browsers use for the <table>, <select>, and <button> elements, and for <input> elements whose type is radio, checkbox, reset, button, submit, color, or search.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            border: 4px solid black;
+            background-color: blue;
+            height: 3444px;
+        }
+        .box{
+            border: 4px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+            display: inline-block; /*This will take all the box side by side horizontally*/
+
+
+    
+        }
+        #box3{
+            position: relative; /*if we use position: relative; then we can use top,bottom,left,right properties on our element/box and it will move around its normal position*/
+            /* top: 34px;
+            left: 34px; */
+
+            position: absolute;/*if we use position: absolute; then our box/element will move towards its parent*/
+            /* top: 34px;
+            left: 34px; */
+
+            position: fixed; /*if we use position: fixed; then the position of our element/box will be fixed at one place and even after scrolling the page, it's position will not change*/
+            /* right: 4px; */
+
+            position: sticky; /*if we use position: sticky;  then the position of our element/box will be sticked at one place and even after scrolling the page, it's position will not change*/
+            /* top: 3px; */
+
+            position: fixed; 
+            /* top: 3px;  */
+            /*now 3rd and 4th box will intersect each other and 4th box is moved towards 3rd box but if we use position:sticky then 4th box will not move towards the position of 3rd box and 3rd box will hold its position and will not allow any box to tske its place and also the box will not change its positon if sticky is used*/
+
+            position: fixed; 
+            right: 3px;
+        }
+    </style>
+
+</head>
+<!--
+CSS position:-static(default),relative,absolute,fixed,sticky
+-->
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+</html>

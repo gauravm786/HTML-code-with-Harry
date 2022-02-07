@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+The <nav> tag defines a set of navigation links.
+Notice that NOT all links of a document should be inside a <nav> element. The <nav> element is intended only for major block of navigation links.
+    -->
+    <!-- placeholder will already show something written before typing or using the search box -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        .navbar{
+            background-color:black;
+            border-radius: 40px;
+        }
+        .navbar li{  /*It will target li of navbar*/
+            float:left;  /*everything will move to left and there will be no bgcolor because of using float the content is overflow from parent*/
+            list-style: none; /*It will remove bullet*/
+            margin: 13px 20px;
+        }
+        .navbar ul{   /*It will target ul of navbar*/
+            overflow: auto; /*this will bring back the bgcolor(content/text will come inside parent) which was not visible because of using float:left;*/
+
+        }
+        .navbar li a{                /*It will target a of li of navbar*/
+            padding: 3px 3px;
+            text-decoration: none;  /*this will remove underline from text which was occured because of using a tag href attribute*/
+            color: white;
+
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+        border: 3px solid blue;
+        border-radius: 15px;
+        width: 120px;
+        padding: 2px 17px;
+        }
+        .navbar li a:hover{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+   <header>
+       <nav class="navbar">
+           <ul>
+               <li><a href="">Home</a></li>
+               <li><a href="">About</a></li>
+               <li><a href="">Services</a></li>
+               <li><a href="">Contact</a></li>
+               <!-- <div class="search">This is search box 
+                   <input type="text"> -->
+                   <div class="search">
+                       <input type="text" name="search" id="search" placeholder="search this website"> 
+                   </div>
+               </div>
+           </ul>
+       </nav>
+   </header>
+    
+</body>
+</html>

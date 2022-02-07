@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on selectors</title>
+    <style>
+        h1{
+            color: black;
+            background-color: red;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* p of li and li of div will be styled */
+        div li p{
+            color: black;
+            background-color: red;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /*all the p in div will get styled whether p is direct child of div or not*/
+        /* div p{
+            color: yellow;
+            background-color: green;
+            font-weight: bold;
+        } */
+
+        /*all the p who are direct child of div will be styled and we use this ">" operator*/
+        /*if p is right inside div then CSS will be applied*/
+        /* div > p{
+            color: yellow;
+            background-color: green;
+            font-weight: bold;
+        } */
+
+        /*div whose previous sibling is p will be styled e.g<div> <div></div> <p></p> </div> <p></p> and + operator is used*/
+        /*or p is right after div or p is next sibling of div*/
+        /* div + p{
+            color: yellow;
+            background-color: green;
+            font-weight: bold;
+        } */
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item"><p>This is another paragraph in li</p></li>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+</body>
+</html>

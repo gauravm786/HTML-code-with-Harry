@@ -1,0 +1,173 @@
+<!--
+1.This will make all the fonts orange and background color black of the text/content.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        p{
+            color: orange;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+<p>This is a simple paragraph to demonstrate CSS selectors</p>
+<p>This is a simple paragraph to demonstrate CSS selectors</p>
+
+<div>
+<p>This is a simple paragraph inside div to demonstrate CSS selectors</p>
+</div>
+
+</body>
+</html>
+-->
+
+
+<!-- 
+    2.Here fonts and bgcolor will be changed depending on the class(.) or id(#).
+    If class is used in place of id or viceversa then there will be no changes in the text/content.
+    
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style> 
+                .orange{
+                    color: orange;
+                    background-color: black;
+                }
+                #blue{
+                    color: blue;
+                    background-color: black;
+                }
+            </style>
+    </head>
+    <body>
+        
+        <p class="orange">This is a simple paragraph to demonstrate CSS selectors</p>
+        
+        <p id="blue">This is a simple paragraph to demonstrate CSS selectors</p>
+        
+        <div>
+            <p>This is a simple paragraph inside div to demonstrate CSS selectors</p>
+        </div>
+        
+    </body>
+    </html>
+-->
+    
+    
+<!--
+        3.Here fonts and bgcolor will be changed depending on the class(.) or id(#).
+        Here multiple class selector can be used for one or multiple class but id selector can be used only for one id as it is unique
+        and one id selector cannot be used in two different id.
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style> 
+            .orange{
+                color: orange;
+            }
+            
+            .bgblack{
+                background-color:black;
+            }
+            
+            #blue{
+                color: blue;
+            }
+            
+            #black{
+                background-color:blue;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <p class="orange bgblack" >This is a simple paragraph to demonstrate CSS selectors</p>
+        
+        <p id="black" >This is a simple paragraph to demonstrate CSS selectors</p>
+        
+        <div>
+            <p>This is a simple paragraph inside div to demonstrate CSS selectors</p>
+        </div>
+        
+    </body>
+    </html>
+-->
+
+
+
+<!--
+    4.Here fonts and bgcolor will be changed depending on the class(.) or id(#).
+        Here different properties will be defined in seperate class but id selector can be used only for one id 
+        and one id selector cannot be used in two different id.
+        Here we will use grouping selector and grouping selector will make multiple tags stylish
+    -->
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style> 
+           /* Element selector */
+           p{
+               border: 2px solid red;
+           }
+       
+
+            /* class(.) selector */
+            .orange{
+                color: orange;
+            }
+            
+            .bgblack{
+                background-color:black;
+            }
+            
+           /* id(#) selector */
+            #blue{
+                color: blue;
+            }
+            
+            #black{
+                background-color:blue;
+            }
+
+            /* grouping selector */
+            footer,span{
+                background-color: chartreuse;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <p class="orange bgblack" >This is a simple paragraph to demonstrate CSS selectors</p>
+        
+        <p id="black" >This is a simple paragraph to demonstrate CSS selectors</p>
+        
+        <div>
+            <p>This is a simple paragraph inside div to demonstrate CSS selectors</p>
+            <span>This is a span</span>
+        </div>
+        <footer>This is a footer</footer>
+        
+    </body>
+    </html>
+    <!-- select and ctrl + / to comment out the line in html -->
